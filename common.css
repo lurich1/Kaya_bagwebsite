@@ -1,0 +1,288 @@
+/* Common Styles for Kaaya Mission Backpack Website */
+
+/* Base Variables */
+:root {
+    --primary-blue: #0a4da8;
+    --dark-blue: #0a2b5c;
+    --light-blue: #4bb4e6;
+    --primary-orange: #e67e42;
+    --light-orange: #ffa726;
+    --primary-green: #2e7d32;
+    --light-green: #4caf50;
+    --primary-purple: #6a1b9a;
+    --light-purple: #9c27b0;
+    --background: #f8f8fa;
+    --white: #ffffff;
+    --light-gray: #f5f5f7;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #757575;
+    --black: #212121;
+    --border-radius-sm: 8px;
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --header-height: 80px;
+    --max-width: 1200px;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background);
+    color: var(--dark-blue);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Common Header Structure */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 a {
+    text-decoration: none;
+}
+
+.blue-text {
+    color: var(--primary-blue);
+    font-weight: 800;
+}
+
+.tagline {
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-top: -5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Common Button Styles */
+.btn-primary {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Common Banner Structure */
+.page-banner {
+    padding: 80px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner h1 {
+    color: var(--white);
+    font-size: 48px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Common Content Container */
+.content-container {
+    padding: 60px 40px;
+}
+
+/* Common Section Title */
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+/* Common Footer Structure */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 60px 40px 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo h2 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-links h3, .footer-contact h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h3::after, .footer-contact h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    transform: translateX(5px);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Common Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Common Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-contact h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .page-banner h1 {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Solution | Kaaya Mission Backpack</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="upload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1><a href="index.html"><span class="blue-text">KAAYA</span></a></h1>
+                <p class="tagline">Mission Backpack</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="mission.html">Mission</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="upload.html" class="active">Upload</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary pulse">Get Started</button>
+        </header>
+
+        <div class="page-banner">
+            <h1 class="animate__animated animate__fadeInDown">Upload Your Solution</h1>
+            <div class="banner-image animate__animated animate__zoomIn">
+                <img src="upload-banner.svg" alt="Upload illustration">
+            </div>
+        </div>
+
+        <div class="content-container">
+            <section class="upload-intro animate__animated animate__fadeIn">
+                <h2 class="section-title">Share Your Achievements</h2>
+                <div class="intro-content">
+                    <div class="intro-image">
+                        <img src="upload-intro.svg" alt="Upload process illustration">
+                    </div>
+                    <div class="intro-text">
+                        <p>Completed a challenge? Great job! Now it's time to share your amazing work with the Kaaya community. Your solutions inspire others and showcase your creativity and problem-solving skills.</p>
+                        <div class="upload-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Complete a Challenge</h3>
+                                    <p>Choose from our collection of educational challenges and complete it at your own pace.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Document Your Work</h3>
+                                    <p>Take photos, videos, or write about your process and what you learned.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Upload Your Solution</h3>
+                                    <p>Use the form below to share your work with the Kaaya community.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="upload-guidelines animate__animated animate__fadeIn">
+                <h2 class="section-title">Submission Guidelines</h2>
+                <div class="guidelines-container">
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <img src="guideline-format.svg" alt="Format icon">
+                        </div>
+                        <h3>Accepted Formats</h3>
+                        <ul class="guideline-list">
+                            <li>Images: JPG, PNG, GIF (max 5MB each)</li>
+                            <li>Videos: MP4, MOV (max 50MB)</li>
+                            <li>Documents: PDF, DOC, DOCX (max 10MB)</li>
+                            <li>Presentations: PPT, PPTX (max 20MB)</li>
+                        </ul>
+                    </div>
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <img src="guideline-content.svg" alt="Content icon">
+                        </div>
+                        <h3>Content Requirements</h3>
+                        <ul class="guideline-list">
+                            <li>Include your name and age</li>
+                            <li>Mention which challenge you completed</li>
+                            <li>Describe your process and what you learned</li>
+                            <li>Share any challenges you faced and how you overcame them</li>
+                        </ul>
+                    </div>
+                    <div class="guideline-card">
+                        <div class="guideline-icon">
+                            <img src="guideline-privacy.svg" alt="Privacy icon">
+                        </div>
+                        <h3>Privacy & Safety</h3>
+                        <ul class="guideline-list">
+                            <li>Do not include personal information like address or phone number</li>
+                            <li>Get parent/guardian permission if you're under 13</li>
+                            <li>Only upload content you created yourself</li>
+                            <li>Be respectful and positive in your descriptions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="upload-form-section animate__animated animate__fadeIn">
+                <h2 class="section-title">Upload Your Solution</h2>
+                <div class="upload-form-container">
+                    <form id="solutionUploadForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Age <span class="required">*</span></label>
+                                <input type="number" id="age" name="age" min="5" max="18" placeholder="Your age" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="challengeName">Challenge Name <span class="required">*</span></label>
+                                <select id="challengeName" name="challengeName" required>
+                                    <option value="">Select a challenge</option>
+                                    <option value="space-explorer">Space Explorer</option>
+                                    <option value="robot-builder">Robot Builder</option>
+                                    <option value="eco-warrior">Eco Warrior</option>
+                                    <option value="bridge-builder">Bridge Builder</option>
+                                    <option value="mini-garden">Mini Garden</option>
+                                    <option value="code-breaker">Code Breaker</option>
+                                    <option value="weather-watcher">Weather Watcher</option>
+                                    <option value="other">Other (specify below)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="otherChallengeGroup" style="display: none;">
+                            <label for="otherChallenge">Other Challenge Name <span class="required">*</span></label>
+                            <input type="text" id="otherChallenge" name="otherChallenge" placeholder="Enter challenge name">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description <span class="required">*</span></label>
+                            <textarea id="description" name="description" rows="5" placeholder="Describe your solution, process, and what you learned" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Files <span class="required">*</span></label>
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-message">
+                                    <img src="upload-icon.svg" alt="Upload icon">
+                                    <p>Drag & drop files here or <span class="browse-text">browse</span></p>
+                                    <p class="upload-note">Max 5 files. Accepted formats: JPG, PNG, GIF, MP4, MOV, PDF, DOC, DOCX, PPT, PPTX</p>
+                                </div>
+                                <input type="file" id="fileUpload" name="files[]" multiple accept=".jpg,.jpeg,.png,.gif,.mp4,.mov,.pdf,.doc,.docx,.ppt,.pptx" class="file-input" required>
+                            </div>
+                        </div>
+                        <div class="upload-preview" id="uploadPreview">
+                            <!-- Preview items will be added here dynamically -->
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                            <label for="termsAgreement">I agree to the <a href="#" class="terms-link">terms and conditions</a> and confirm I have permission to share this content <span class="required">*</span></label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="parentConsent" name="parentConsent">
+                            <label for="parentConsent">I have parent/guardian permission (required if under 13)</label>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">Submit Solution</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="featured-solutions animate__animated animate__fadeIn">
+                <h2 class="section-title">Featured Solutions</h2>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-image">
+                            <img src="solution-1.svg" alt="Solar System Model">
+                            <div class="solution-badge">Space Explorer</div>
+                        </div>
+                        <div class="solution-content">
+                            <h3>Solar System Model</h3>
+                            <p class="solution-author">By Maya, Age 9</p>
+                            <p class="solution-desc">I created a 3D model of our solar system using recycled materials. I learned so much about the planets and their orbits!</p>
+                            <a href="#" class="btn-secondary">View Solution</a>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-image">
+                            <img src="solution-2.svg" alt="Cardboard Robot">
+                            <div class="solution-badge">Robot Builder</div>
+                        </div>
+                        <div class="solution-content">
+                            <h3>Cardboard Robot</h3>
+                            <p class="solution-author">By Ethan, Age 11</p>
+                            <p class="solution-desc">I built a robot from cardboard boxes that can move its arms using a simple pulley system. It was challenging but fun!</p>
+                            <a href="#" class="btn-secondary">View Solution</a>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-image">
+                            <img src="solution-3.svg" alt="Ecosystem Jar">
+                            <div class="solution-badge">Eco Warrior</div>
+                        </div>
+                        <div class="solution-content">
+                            <h3>Ecosystem Jar</h3>
+                            <p class="solution-author">By Sophia, Age 12</p>
+                            <p class="solution-desc">I created a self-sustaining ecosystem in a jar with plants, soil, and small creatures. It's amazing to watch it thrive!</p>
+                            <a href="#" class="btn-secondary">View Solution</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="upload-join animate__animated animate__fadeIn">
+                <h2 class="section-title">Join Our Community</h2>
+                <p>Connect with other young explorers and share your learning journey!</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">Sign Up Now</button>
+                    <a href="challenges.html" class="btn-secondary">Explore Challenges</a>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><span class="blue-text">KAAYA</span></h2>
+                    <p class="tagline">Mission Backpack</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="upload.html">Upload Solution</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@kaaya.edu</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kaaya Mission Backpack. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>
